@@ -1,0 +1,51 @@
+<div  class="container" [@inOutAnimation] *ngIf="getOpen()">
+    <div class="inner">
+    <div class="cart-head">
+        <h1>My Cart ({{baskets.size}} Items)</h1>
+        <button (click)="change()" class="close">X</button>
+    </div>
+
+    <div class="items" >
+       <ng-container *ngIf="baskets.size===0">
+        <div class="no-item">
+            <h1>No Items 😒</h1>
+            <button >add</button>
+    
+        </div>
+       </ng-container>
+       <ng-container *ngIf="baskets.size">
+        <div class="cart-content">
+            <ng-container *ngFor="let item of baskets;let i=index">
+                <div class="cart-item">
+                    <img src="{{item.imgUrl}}" alt="">
+                    <div>
+                        <p class="pro-name">{{item.name}}</p>
+                        <button class="remove" (click)="remove(item)">Remove</button>
+                        <p class="pro-quant">{{item.quantity}}</p>
+                        <div class="added">
+                            <button class="addplus" (click)=addplus(item)>+</button>
+                            <p style="    /* display: inline; */
+                            width: 100%;
+                            text-align: center;
+                            margin: 0;
+                            position: absolute;">{{item.quant}}</p>
+                            <button class="addminus" style="right: 0;position: absolute;" (click)="addminus(item)">-</button>
+                        </div>
+                        <p class="pro-price">&#x20B9; {{item.price}}</p>
+                    </div>
+                </div>
+            </ng-container>
+        </div>
+    
+       </ng-container>
+
+    </div>
+    <div class="check-out">
+        <div>
+         <p class="item-count">{{baskets.size}} Items</p>
+         <p class="total">&#x20B9;  {{basketService.totalPrice()}}</p>
+        </div>
+        <button routerLink='/billing' [disabled]="!basketService.basket.size" (click)='change()'>CheckOut</button>
+    </div>
+    </div>
+</div>

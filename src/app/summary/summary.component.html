@@ -1,0 +1,30 @@
+<div class="cont">
+    <div class="shipping">
+        <h3>Shipping Address</h3>
+        <div>
+            <p>{{all.firstName}} {{all.lastName}}</p>
+            <p>{{all.address.street}},{{all.address.city}}</p>
+            <p>{{all.address.landMark}}, {{all.address.state}}</p>
+            <p>{{all.address.pincode}}</p>
+            <p>Ph: {{all.phn}}</p>
+        </div>
+    </div>
+    <div class="cart">
+        <div class="basket">
+            <div *ngFor="let item of bas" class="item">
+                    <img src="{{item.imgUrl}}">
+                <div>
+                   <div> 
+                       <p style="display: inline-block;">{{item.name}}</p>
+                       <p style="float: right;color: red;">&#x20B9; {{item.totprice}}</p>
+                    </div>
+                    <pre class="tab">&#x20B9;{{item.price}}/{{item.quantity}}       Quantity: {{item.quant}}</pre>
+                </div>
+            </div>
+        </div>
+        <div class="total">
+            <h2 style="display: inline-block;">Total:</h2>
+            <h2 style="float: right;">&#x20B9; {{basket.totalPrice()}}</h2>
+        </div>
+    </div>
+</div>

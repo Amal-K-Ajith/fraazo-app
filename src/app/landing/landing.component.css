@@ -1,0 +1,100 @@
+.landing-container{
+    /* background: cyan; */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0;
+    height: 380px;
+}
+.inner{
+    /* background: url('../img/caro-1.png') no-repeat;
+    background-size: contain; */
+    width: 60%;
+    height: inherit;
+    margin: 10px;
+    border-radius: 20px;
+    /* overflow: hidden; */
+}
+.coursal{
+    width: 100%;
+    position: relative;
+    border-radius: 20px;
+    height: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.coursal>div{
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    position: absolute;
+    background-size: cover;
+
+}
+
+.side-three{
+    width: 30.33333%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin: 10px;
+}
+
+.side-three :nth-child(1){
+    background: url('../../assets/img/landing-div-1.png') no-repeat;
+    background-size: contain;
+    height: 33.3333%;
+    margin-top: 0;
+}
+.side-three :nth-child(2){
+    background: url('../../assets/img/landing-div-2.png') no-repeat;
+    background-size: contain;
+    height: 33.3333%;
+}
+.side-three :nth-child(3){
+    background: url('../../assets/img/landing-div-3.png') no-repeat;
+    background-size: contain;
+    height: 33.3333%;
+    margin-bottom:0 ;
+}
+
+.side-three>div{
+    margin: 10px;
+    border-radius: 20px;
+    transition: 1s;
+}
+.slide-img{
+    width: 100%;
+    max-width: 1024px;
+    height: 100%;
+    border-radius: 20px;
+}
+/* .active{ */
+    /* opacity: 1;
+} */
+
+.three-dots{
+    position: relative;
+    bottom: -18px;
+    text-align: center;
+    padding: 0 ;
+    width: 100%;
+    /* list-style: none; */
+    margin: 0;
+}
+.three-dots>span{
+    display: inline-block;
+ margin: 10px;
+ width: 10px;
+ cursor: pointer;
+ height: 10px;
+ background: #49c19f;
+ opacity: .7;
+ transition: 1s;
+}
+
+.big{
+    border-radius: 20px;
+    box-shadow: inset 0 0 18px 20px black;
+}

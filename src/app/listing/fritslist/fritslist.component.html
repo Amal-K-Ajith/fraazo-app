@@ -1,0 +1,19 @@
+<div class="container">
+    <div *ngFor="let item of fruits" class="items">
+     <div routerLink='/detail/{{item.id}}'>
+        <div class="pro-img"><img src="{{item.imgUrl}}" alt=""></div>
+        <div #it class="pro-name">{{item.name}}</div>
+        <div class="details">
+            <p>{{item.quantity}}</p>
+        <div class="price">&#x20B9;{{item.price}}
+            <button class="cart" *ngIf="!yesfn(item)" (click)="$event.stopPropagation();add(item)"><i class="fas fa-cart-plus"></i>ADD</button>
+            <div *ngIf="yesfn(item)" class="added">
+                <button class="plusbtn"  (click)="$event.stopPropagation();addplus(item);">+</button>
+                <p class="quantnum">{{item.quant}}</p>
+                <button class="minusbtn" (click)="$event.stopPropagation();addminus(item)">-</button>
+            </div>
+        </div>
+        </div>
+     </div>
+    </div>
+</div>

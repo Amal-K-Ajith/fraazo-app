@@ -1,0 +1,46 @@
+.cont{
+    display: flex;
+    justify-content: center;
+}
+h1{
+    margin: 10px 0px;
+}
+.form{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background: #5dc6ad;
+    padding: 10px 40px;
+}
+.name{
+    flex-direction: column;
+    display: flex;
+    gap: 1;
+}
+/* label{color: #5dc6ad;} */
+input{
+    border-radius: 20px;
+    border: 1px solid #5dc6ad;
+    height: 30px;
+    padding: 0px 10px;
+    margin: 4px 0px;
+    background: #f9f9f9;
+}
+input:focus{
+    border: 1px solid red;
+    outline: none;
+}
+
+.address{
+    display: flex;
+    flex-direction: column;
+}
+
+button[type='submit']{
+    border-radius: 20px;
+    outline: none;
+    width: 100px;
+    height: 30px;
+    margin: 20px 0px;
+    border: none;
+}

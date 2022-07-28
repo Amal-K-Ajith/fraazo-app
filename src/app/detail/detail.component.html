@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="pro-img">
+        <img src="{{item.imgUrl}}" width="400px" alt="">
+    </div>
+    <div class="detail">
+        <h1>{{item.name}}</h1>
+        <h3>{{item.quantity}}</h3>
+        <p>&#x20B9; {{item.price}}</p>
+        <div style="padding-left: 50px;height: 60px;"> 
+            <button *ngIf="!yesfn(item)" class="add" (click)='add(item)'><i class="fas fa-cart-plus"></i>Add</button>
+            <div *ngIf="yesfn(item)" class="added">
+                <button class="plusbtn" (click)="$event.stopPropagation();addplus(item);">+</button>
+                <p class="quantnum">{{item.quant}}</p>
+                <button class="minusbtn" (click)="$event.stopPropagation();addminus(item)">-</button>
+            </div>
+        </div>
+        <div class="desc">
+            
+<div class="btns">
+    <button class="tablink" (click)='showDes(home,news,contact)'>Home</button>
+    <button class="tablink" (click)='showDes(news,home,contact)' id="defaultOpen">News</button>
+    <button class="tablink" (click)='showDes(contact,home,news)'>Contact</button>
+
+ </div>
+ <div #home id="Home" style="display: block;" class="tabcontent">
+   <h3>Home</h3>
+   <p>Home is where the heart is..</p> 
+ </div>
+
+ <div #news id="News" class="tabcontent">
+   <h3>News</h3>
+   <p>Some news this fine day!</p> 
+ </div>
+
+ <div #contact id="Contact" class="tabcontent">
+   <h3>Contact</h3>
+   <p>Get in touch, or swing by for a cup of coffee.</p>
+ </div>
+
+        </div>
+    </div>
+    
+</div>

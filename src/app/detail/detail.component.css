@@ -1,0 +1,126 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    /* background: darkcyan; */
+    /* height: 200px; */
+    /* width: 100%; */
+    padding: 0 70px;
+}
+.pro-img{
+    width: 600px;
+    /* height: 500px; */
+    /* background: darkorange; */
+    text-align: center;
+}
+.detail{
+    /* background: darkviolet; */
+    height: inherit;
+    width: 800px;
+}
+.detail>h1{
+    font-size: 50px;
+    font-weight: 500;
+    padding-left: 50px;
+}
+.detail>h3{
+    padding-left: 50px;
+    color: darkgray;
+}
+.detail>p{
+    font-size: 20px;
+    padding-left: 50px;
+}
+.add{
+
+    background: white;
+    border: 1px solid #4fbb90;
+    color: #4fbb90;
+    position: relative;
+    bottom: 7px;
+    height: 40px;
+    padding-left: 5px;
+    border-radius: 20px;
+    margin: 10px 0;
+    width: 100px;
+}
+.add:hover{
+    background: #4fbb90;
+    color: #fff;
+}
+.desc{
+    padding: 0 25px;
+    position: relative;
+    height: 350px;
+    overflow: hidden;
+}
+.btns{
+    display: flex;
+}
+.tablink {
+    background-color: #555;
+    color: white;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: black;
+    display: none;
+    width: 100%;
+    position: absolute;
+    padding: 100px 20px;
+    background: #e8e8e8;
+    /* height: 100%; */
+  }
+  
+  /* #Home {background-color: red;}
+  #News {background-color: green;}
+  #Contact {background-color: blue;}
+  #About {background-color: orange;} */
+  .fas{
+      padding-right: 10px;
+  }
+  .added{
+    /* background: turquoise; */
+    width: 70px;
+    display: flex;
+    /* height: 31px; */
+    /* float: right; */
+    height: inherit;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+  .plusbtn{
+    left: 0;
+    /* position: absolute; */
+    border-radius: 10px 0 0 10px;
+    z-index: 1;
+    background: #fff;
+    border: 2px 0 0 2px solid;
+    border: 2px solid #4fbb90;
+}
+.quantnum{
+    width: 100%;
+    text-align: center;
+    padding-left: 5px;
+    margin: 0;
+    /* position: absolute; */
+}
+.minusbtn{
+    right: 0;
+    background: #fff;
+    /* position: absolute; */
+    border: 2px solid #4fbb90;
+    border-radius: 0 10px 10px 0px;
+}

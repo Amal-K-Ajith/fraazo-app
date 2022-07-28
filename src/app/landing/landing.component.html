@@ -1,0 +1,28 @@
+<div class="landing-container">
+    <div class="inner">
+        <div class="coursal">
+        <!-- <div *ngFor="let item of list" class="{{item}}"></div> -->
+        <!-- <div class="item2"></div>
+        <div class="item3"></div> -->
+
+        <ng-container *ngFor="let slide of slides; let i = index; " >
+            <div *ngIf="i==curslide" class="slides"  (mouseenter)="isPaused=false" (mouseleave)="isPaused=true"  @carouselAnimation>
+                <a href=""><img class="slide-img" src="{{slide.img}}" alt=""></a>
+            </div>
+          </ng-container>
+       </div>
+       <ul class="three-dots">
+        <ng-container *ngFor="let slide of slides; let i =index">
+            <span id={{i}} (click)="curslide=i" [class.big]="i==curslide"></span>
+        </ng-container>
+    </ul>
+   </div>
+    <div class="side-three">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</div>
+
+<app-vege></app-vege>
+<app-fruits></app-fruits>

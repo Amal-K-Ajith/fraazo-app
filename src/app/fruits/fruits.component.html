@@ -1,0 +1,38 @@
+<div class="fruit">
+    <div class="cat-name" style="display: flex;align-items: center;">
+        <h2 class="cat">Fruits</h2>
+        <a [routerLink]="['../listing/fruits']" routerLinkActive="router-link-active" >( View All )</a>
+    </div>
+
+    <div class="slider">
+        <button class="slide-btn" (click)="proSliderLeft(test)"><i class="fas fa-chevron-left" style="    width: 13px;
+            margin: 0;
+            height: 13px;"></i></button>
+        <div class="slider-inner">
+            <div class="IDK" #test>
+                <div class="slider-item" #slidr *ngFor="let item of fruit">
+                 <div routerLink='/detail/{{item.id}}'>
+                    <div class="pro-img"><img src="{{item.imgUrl}}" alt=""></div>
+                    <div #it class="pro-name">{{item.name}}</div>
+                    <div class="details">
+                        <p>{{item.quantity}}</p>
+                    <div class="price">&#x20B9;{{item.price}}
+                        <button class="cart" (click)='$event.stopPropagation();add(item)' *ngIf="!yesfn(item)" ><i class="fas fa-cart-plus"></i>ADD</button>
+                        <div *ngIf="yesfn(item)" class="added">
+                            <button class="plusbtn" style="left: 0;position: absolute;z-index: 1;" (click)="$event.stopPropagation();addplus(item);">+</button>
+                            <p class="quantnum">{{item.quant}}</p>
+                            <button class="minusbtn" style="right: 0;position: absolute;" (click)="$event.stopPropagation();addminus(item)">-</button>
+                        </div>
+                    </div>
+                    </div>
+                 </div>
+               </div>
+            </div>
+           
+        </div>
+        <button class="slide-btn" (click)="proSliderRight(test)"><i class="fas fa-chevron-right" style="    width: 13px;
+            margin: 0;
+            height: 13px;"></i></button>
+    </div>
+
+</div>

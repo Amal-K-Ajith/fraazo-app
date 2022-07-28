@@ -1,0 +1,42 @@
+<div class="cont">
+    <div class="form">
+        <form [formGroup]="deliveryDetailForm" (ngSubmit)="onSubmit()">
+            <h1>Enter Delivery Details</h1>
+            <div class="name">
+                <label for="fir-name">First Name: </label>
+                <input id="fir-name" formControlName="firstName" type="text">
+                <label for="las-name">Last Name: </label>
+                <input id="las-name" formControlName="lastName" type="text">
+                <label for="phn">Phone No: </label>
+                <input id="phn" formControlName="phn" type="tel">
+            </div>
+            <div class="address" formGroupName="address">
+                <h1>Address</h1>
+                <label for="addr-street">Street: </label>
+                <input id="addr-street" formControlName="street" type="text">
+                <label for="addr-city">City: </label>
+                <input id="addr-city" formControlName="city" type="text">
+                <label for="addr-landMark">LandMark: </label>
+                <input id="addr-landMark" formControlName="landMark" type="text">
+                <label for="addr-state">State: </label>
+                <input id="addr-state" formControlName="state" type="text">
+                <label for="addr-pincode">Pincode: </label>
+                <input id="addr-pincode" formControlName="pinCode" type="text">
+            </div>
+            <!-- <div formArrayName="another">
+                <h2>Another</h2>
+                <button (click)="addAnother()">add</button>
+                <div *ngFor="let alias of another.controls; let i=index">
+                    The repeated alias template
+                    <label for="alias-{{ i }}">Alias:</label>
+                    <input id="alias-{{ i }}" type="text" [formControlName]="i">
+                  </div>
+            </div> -->
+            <p style="color: red;font-size: 13px;">*Complete the form to enable button.</p>
+            <button type="submit" [disabled]="!deliveryDetailForm.valid">Submit</button>
+        </form>
+        <!-- <p>{{deliveryDetailForm.value | json}}</p> -->
+        <!-- <p>{{deliveryDetailForm.value.firstName}} <br>{{deliveryDetailForm.value.lastName}}</p> -->
+
+    </div>
+</div>

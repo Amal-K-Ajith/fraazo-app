@@ -1,11 +1,11 @@
 {
   "hosting": {
-    "source": ".",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
     ],
+    "public" : "dist/fraazo-app",
     "frameworksBackend": {
       "region": "asia-east1"
     }

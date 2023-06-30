@@ -14,7 +14,7 @@ jobs:
       - run : npm i
       - run: npm uninstall -g angular-cli
       - run: npm uninstall -g @angular/cli
-      - run: npm cache clean
+      - run: npm cache clean --force
       - run: npm install -g @angular/cli
       - run: ng build
       - uses: FirebaseExtended/action-hosting-deploy@v0

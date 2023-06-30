@@ -4,13 +4,14 @@
     /* background: darkcyan; */
     /* height: 200px; */
     /* width: 100%; */
-    padding: 0 70px;
+    padding: 15px 70px;
 }
 .pro-img{
     width: 600px;
     /* height: 500px; */
     /* background: darkorange; */
     text-align: center;
+    background-size: contain;
 }
 .detail{
     /* background: darkviolet; */

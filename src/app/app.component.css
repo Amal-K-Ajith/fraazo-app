@@ -4,26 +4,27 @@
 .nav-cont{
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid grey;
     background: white;
-    height: 100px;
+    /* height: 100px; */
     position: sticky;
-    z-index: #f9f9f9;
+    z-index: 1;
+    width: 100%;
 }
 nav{
-    background:#fff;
+    background: #fff;
     height: 88px;
     display: flex;
     align-items: center;
-     justify-content: space-evenly; 
-
-     position: fixed;
-     z-index: 1;
+    justify-content: space-evenly;
+    border-bottom: 1px solid grey;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
      /* width: 100%; */
 }
-/* .hold{
+.hold{
     height: 88px;
-} */
+}
 .logo{
     background: no-repeat;
     background-image: url("../assets/img/fraazo_logo.svg");

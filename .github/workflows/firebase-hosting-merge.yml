@@ -12,6 +12,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run : npm i
+      - run: npm uninstall -g angular-cli
+      - run: npm uninstall -g @angular/cli
+      - run: npm cache clean
+      - run: npm install -g @angular/cli
       - run: ng build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:

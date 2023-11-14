@@ -10,6 +10,7 @@ import { BillingComponent } from './billing/billing.component';
 import { SummaryComponent } from './summary/summary.component';
 
 const routes: Routes = [
+  { path: '**', redirectTo: '/home',  pathMatch: 'full' },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: LandingComponent,data:{animation:'HomePage'} },
     // {path:'listing',component:CheckingComponent,outlet:'test'},
